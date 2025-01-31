@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid introduction</title>
+
+    <style>
+        .grid-container
+        {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            background-color: aquamarine;
+            grid-template-areas: a b a ;
+
+
+        }
+        .grid-items
+        {
+            background-color: bisque;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: a;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-items">1</div>
+        <div class="grid-items">2</div>
+        <div class="grid-items">3</div>
+        <div class="grid-items">4</div>
+        <div class="grid-items">5</div>
+        <div class="grid-items">6</div>
+
+    </div>
+    
+</body>
+</html>

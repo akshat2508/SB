@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header-main-footer-html</title>
+    <style>
+        .container
+        {
+            display: grid;
+            grid-template-rows: 50px 1fr 50px;
+            height: 100vh;
+            /* vh = view port height  */
+            gap: 10px;
+        }
+
+        .header
+        {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main
+        {
+            display: flex;
+            background-color: skyblue;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer
+        {
+            display: flex;
+            background-color: lightgreen;
+            justify-content: center;
+            align-items: center;
+        }
+        .sidebar {
+            position: fixed;
+            width: 200px; 
+            height: 100vh; 
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header </div>
+        <div class="main ">Main</div>
+        <div class="footer">Footer</div>
+        <div class="sidebar">Sidebar</div>
+    </div>
+    
+</body>
+</html>
