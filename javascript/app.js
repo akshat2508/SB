@@ -41,31 +41,107 @@
 
 
 
-let day = "Monday";
-switch(day)
+// let day = "Monday";
+// switch(day)
+// {
+//     case "Monday":
+//         console.log("Today is Monday");
+//         break;
+//     case "Tuesday":
+//         console.log("Today is Tuesday");
+//         break;
+//     case "Wednesday":
+//         console.log("Today is Wednesday");
+//         break;
+//     case "Thursday":
+//         console.log("Today is Thursday");
+//         break;
+//     case "Friday":
+//         console.log("Today  is Friday");
+//         break;
+//     case "Saturday":
+//         console.log("Today is Saturday");
+//         break;
+//     case "Sunday":
+//         console.log("Today is Sunday");
+//         break;
+//     default:
+//         console.log("Invalid entry of day");
+//         break;
+// }
+
+
+
+
+// let text  = " ";
+// let i =0 ;
+// while(i<10)
+// {
+//     text+="The number is "+ i+ "\n";
+//     i++;
+// }
+// console.log(text);
+
+
+
+
+// let text = " ";
+// let i = 0;
+// do{
+//     text+="The number is "+ i + "\n";
+//     i++;
+// }while(i<10);
+// console.log(text);
+
+// confirm("Do you know that you are GAY ? press OK for Yes  or Cancel for Yes");
+
+
+// alert("Hello world");
+// let name1= prompt("Enter Your name");
+// console.log(name1);
+// let result  = confirm("Are you sure you want to delete this record? ");
+// console.log(result);
+
+
+
+
+// let car = {
+//     name: "BMW",
+//     model : "Xs",
+//     color: "Black",
+//     start: function()
+//     {
+//         console.log("Car started");
+//     },
+
+// };
+
+// console.log(Object.keys(car));
+// console.log(Object.values(car));
+
+
+
+// car.start();
+
+
+// for(let i in car)
+// {
+//     console.log(i +" = "+car[i]);
+// }
+
+
+
+
+// console.log(Math.random());
+// console.log(Math.max(10 ,20,30,40,50));
+//  let date = new Date();
+//  console.log("date: "+ date);
+
+
+
+function greet(name)
 {
-    case "Monday":
-        console.log("Today is Monday");
-        break;
-    case "Tuesday":
-        console.log("Today is Tuesday");
-        break;
-    case "Wednesday":
-        console.log("Today is Wednesday");
-        break;
-    case "Thursday":
-        console.log("Today is Thursday");
-        break;
-    case "Friday":
-        console.log("Today  is Friday");
-        break;
-    case "Saturday":
-        console.log("Today is Saturday");
-        break;
-    case "Sunday":
-        console.log("Today is Sunday");
-        break;
-    default:
-        console.log("Invalid entry of day");
-        break;
+    return "hello "+name;
 }
+
+console.log(greet('Akshat'));
