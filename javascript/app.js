@@ -177,3 +177,22 @@ function greet3(greet2)
 
 greet3("harsh");
 
+
+let fruits = ["Apple" , "Mango" ,"Orange"];
+console.log(fruits);
+
+let numbers = new Array(1,2,3,4,5);
+console.log(numbers);
+
+//INDEXING => accessing array elements
+console.log(fruits[0]);
+
+console.log(fruits[10]);
+
+
+console.log(fruits.push("Grapes"));
+
+console.log(fruits.pop());
+
+console.log(fruits.shift());
+console.log(fruits.unshift("Apple"));
