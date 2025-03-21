@@ -152,3 +152,11 @@ console.log(greet('Akshat'));
 let greet1 = (name) => 
     console.log("Hello "+name);
 greet1("John");
+
+const greet2 = function(name)
+{
+    return "Hello "+name;
+
+}
+
+console.log(greet2("JOHN"));
