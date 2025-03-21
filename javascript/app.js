@@ -138,10 +138,17 @@
 //  console.log("date: "+ date);
 
 
+///// FUNCTION HAS FORMAL PARAMETER AND WHAT WE PASS IS CALLED ACTUAL PARAMETER
 
 function greet(name)
 {
     return "hello "+name;
 }
-
 console.log(greet('Akshat'));
+
+
+//ARROW FUNCTION => it is a shorter syntax for writing function expression 
+
+let greet1 = (name) => 
+    console.log("Hello "+name);
+greet1("John");
