@@ -156,7 +156,24 @@ greet1("John");
 const greet2 = function(name)
 {
     return "Hello "+name;
-
 }
 
 console.log(greet2("JOHN"));
+
+
+//IIFE => IMMEDIATELY INVOKDE FUCNTION EXPRESSION
+
+(function ()
+{
+    console.log("Hello world");
+})();
+
+
+//CALLBACK FUNCTION => A FUNCTION PASSED AS AN ARGUEMENT TO ANOTHER FUCNTION 
+function greet3(greet2)
+{
+    console.log("Hello "+greet2);
+}
+
+greet3("harsh");
+
