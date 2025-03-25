@@ -191,8 +191,91 @@ console.log(fruits[10]);
 
 
 console.log(fruits.push("Grapes"));
-
 console.log(fruits.pop());
-
 console.log(fruits.shift());
 console.log(fruits.unshift("Apple"));
+//SPLICE()=> add or remove an element from a specific index
+
+let fruits2 = ["Apple", "Banana", "Mango", "Orange"];
+fruits2.splice(1,1,"Grapes");
+console.log(fruits2);//["Apple", "GRapes" ,"Mango" ,"Orange"]
+
+
+//NON -MUTATING ARRAY METHODS ->  IT DOES NOT CHANGE THE ORIGINAL ARRAY 
+// Map()=> it creates a new array by calling a funciton on each element of the input array
+let numbers1 = [1,2,3,4,5];
+let result1 = numbers1.map((num)=> num*2);
+// let result2 = numbers1.map(function(num)
+// {
+//     return num*2;
+// })
+//((num)=> num*2)
+console.log(result1);//ouput: [2,4,6,8.10];
+// console.log(result2);
+
+
+
+//filter() =>  it creates a new array with elements that pass the test of the function 
+let result2 = numbers1.filter(function(num)
+{
+    return num > 2;
+});
+console.log(result2);//output: [3,4,5]
+
+//reduce() => It applies a function to each element fo the array to reduce it to a sin
+let result3 = numbers1.reduce(function(accumulator, num){
+    return accumulator+num;
+},0);
+console.log(result3);//output 15/
+//Same thing but different
+let result_3= numbers1.reduce((acc,num)=>acc+num);
+console.log(result_3);
+
+
+//find() =>  it returns the first element that passes the test of the function
+let result4 = numbers1.find((num) => num >2);
+console.log(result4);
+
+
+//findindex()=>it returns the index of the element;
+let result5 =  numbers1.findIndex((num)=> num>2);
+console.log(result5);
+
+//some() =>  it returns true if at least one element passes the test of the function 
+let result6 = numbers1.some((num) => num>2);
+console.log(result6);
+
+
+//every() =>  it returns true of all elements pass the test of the function 
+let result7 = numbers1.every((num) =>  num > 2);
+console.log(result7);
+
+
+//sort()=> it sorts the elements of an array
+let numbers2  = [1,4,2,5,2];
+let result8 = numbers2.sort((a,b)=> a-b);
+console.log(result8);
+
+let result9= numbers2.sort((a,b)=> b-a);
+console.log(result9);
+
+
+//join() =>  it joins all elements of an array into a string
+let result10  = numbers1.join("-");
+console.log(result10);
+
+
+//split() => it splits string into an array 
+let text2= "hello wrold";
+let result11 = text2.split(" ");
+console.log(result11);
+
+//reverse() => reversing an array
+let result12 = numbers2.reverse();
+console.log(result12);
+
+//concat() =>  it merges two or more arrays
+let arr2 = [1,2,3];
+let arr3 = [4,5,6];
+let result13 = arr2.concat(arr3);
+console.log(result13);//output:[1,2,3,4,5,6]
