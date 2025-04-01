@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id= "heading">Original heading</h1>
+    <p id="paragraph">This is my paragraoh</p>
+    <button onclick="changeContent()">Click me </button>
+    <script>
+        function changeContent()
+        {
+            document.getElementById("heading").innerHTML = "<span style= 'color: red'>Updated heading</span>";
+            document.getElementById("paragraph").textContent   = "updated text w/o HTML!";
+        }
+        
+    </script>
+</body>
+</html>

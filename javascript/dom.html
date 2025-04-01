@@ -31,6 +31,18 @@
             let items  = document.getElementsByClassName("item");
             items[0].style.color ="red";
 
+            let para2   = document.getElementsByTagName("p");
+            para2[0].textContent = "Change my first paragraoh"
+
+            let firsItem = document.querySelector(".item");
+            firsItem.style.backgroundColor = "yellow";
+
+            let items1 = document.querySelectorAll(".item");
+            items1.forEach(item => {
+                item.style.border = "2px solid blue";//Adds a border to all matched elements
+
+            })
+
         }
     </script>
 </body>
