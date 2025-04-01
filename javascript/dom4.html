@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding and removing elements with dom</title>
+</head>
+<body>
+    <div id="container">
+        <p id ="paragraph">This is a paragraph</p>
+    </div>
+    <button onclick="addElement()">Add elements</button>
+    <button onclick="removeElement()">Remove Element</button>
+
+    <script>
+        function addElement()
+        {
+            let newpara = document.createElement("p");
+            newpara.textContent= "new paragraph Added!";
+            document.getElementById("container").appendChild(newpara);
+
+        }
+
+        function removeElement()
+        {
+            let para = document.getElementById("paragraph");
+            if(para){
+                document.getElementById("container").removeChild(para);
+            }
+        }
+    </script>
+</body>
+</html>

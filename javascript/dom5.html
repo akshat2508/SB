@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling enhancements for your dom</title>
+</head>
+<body>
+    <button id="mybutton" onclick="changeStyle()">Click me</button>
+    <script>
+        function changeStyle()
+        {
+            let btn  = document.getElementById("mybutton");
+            btn.style.backgroundColor = "blue";
+            btn.style.color= "white";
+            btn.style.padding = "10px 20px";
+            btn.style.borderRadius = "8px";
+        }
+    </script>
+</body>
+</html>
