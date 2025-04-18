@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery img{
+            width: 100px;
+            cursor: pointer;
+            margin: 5px;
+            border: 2px solid #ccc;
+        }
+
+        #lightbox{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <img src="image1.png" onclick="openLightBox('image1.png')">
+        <img src="image2.png" onclick="openLightBox('image2.png')">
+        <img src="image3.png" onclick="openLightBox('image3.png')">
+    </div>
+
+    <div id="lightbox" onclick="closeLightBox()">
+        <img id="lightboxImg">
+    </div>
+
+    <script>
+        function openLightBox(src)
+        {
+            document.getElementById("lightboxImg").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+
+        }
+
+        function closeLightBox()
+        {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    
+</body>
+</html>
