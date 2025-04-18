@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent" style="padding: 20px; background: grey;">
+        <button id="child">Click me</button>
+
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click",function(){
+            alert("parent clicked");
+        });
+
+        document.getElementById("child").addEventListener("click",function(){
+            alert("child clicked");
+            event.stopPropagation(); // prevent bubling
+        });
+    </script>
+    
+</body>
+</html>

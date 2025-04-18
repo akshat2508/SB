@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-96">
+        <h2 class="text-center text-2xl font-semibold mb-4">Dynamic Task Manager</h2>
+        
+
+        <div class="flex gap-2">
+            <input id="taskInput" type="text" placeholder="Enter your task" 
+                class="border p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button onclick="addTask()" class="bg-blue-500 text-white px-5 py-2 rounded">Add Task</button>
+        </div>
+
+
+        <ul id="taskList" class="mt-4 space-y-2"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value.trim();
+            if (taskText === "") {
+                alert("Task cannot be empty!");
+                return;
+            }
+
+            let taskList = document.getElementById("taskList");
+            let li = document.createElement("li");
+            li.className = "bg-gray-200 p-2 rounded flex justify-between items-center";
+
+            let taskSpan = document.createElement("span");
+            taskSpan.innerText = taskText;
+            taskSpan.className = "flex-grow px-2";
+
+
+            let editBtn = document.createElement("button");
+            editBtn.innerText = "Edit";
+            editBtn.className = "bg-yellow-400 text-white px-3 py-1 mx-2 rounded";
+            editBtn.onclick = function () {
+                let newText = prompt("Edit your task:", taskSpan.innerText);
+                if (newText !== null && newText.trim() !== "") {
+                    taskSpan.innerText = newText.trim();
+                }
+            };
+
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+            deleteBtn.className = "bg-red-500 text-white  px-3 py-1 rounded";
+            deleteBtn.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(taskSpan);
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+            taskList.appendChild(li);
+
+
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>
